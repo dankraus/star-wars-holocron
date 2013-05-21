@@ -1,0 +1,17 @@
+<div class="row">
+    <section id="newsEntry-list-container" ng-controller="NewsEntriesCtrl" class="span8">
+        <h3>News from the Web</h3>
+        <article ng-repeat="newsEntry in newsEntries">
+            <header>
+                <h4>{{newsEntry.title}}</h4>
+                <h5>via {{newsEntry.feed.name}}</h5>
+            </header>
+
+            <p ng-bind-html-unsafe="newsEntry.summary"></p>
+
+            <footer>
+                <a href="{{newsEntry.url}}" target="_blank">Read More...</a>
+            </footer>
+        </article>
+  </section>
+</div>

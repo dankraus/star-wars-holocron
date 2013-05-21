@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require angular
 //= require angular-resource
-//= require angular_casts
+//= require angular-sanitize
+//= require swholocron
 //= require_tree ./angular
 //= require_tree .

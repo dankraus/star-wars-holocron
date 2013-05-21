@@ -3,5 +3,7 @@ class NewsEntry < ActiveRecord::Base
   validates_uniqueness_of :title, :url
   validates_presence_of :title, :url
 
+  default_scope order('published DESC')
+
   belongs_to :feed
 end

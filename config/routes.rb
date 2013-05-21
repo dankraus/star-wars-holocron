@@ -1,4 +1,12 @@
 StarWarsHolocron::Application.routes.draw do
+
+  scope :api do
+    get "/news_entries(.:format)" => "news_entries#index"
+    get "/news_entries/:id(.:format)" => "news_entries#show"
+  end
+
+  root to: 'home#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

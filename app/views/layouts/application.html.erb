@@ -1,14 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="SWHolocron">
 <head>
-  <title>StarWarsHolocron</title>
+  <title>Star Wars News Holocron</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div id="main" role="main">
+    <div class="container">
+        <h1>Star Wars Holocron</h1>
+        <div class="content">
+            <div class="row">
+                <div class="span12">
+                    <%= render 'layouts/messages' %>
+                    <%= yield %>
+                </div>
+            </div>
+            <footer>
+            </footer>
+        </div>
+    </div> <!--! end of .container -->
+</div> <!--! end of #main -->
 
 </body>
 </html>
