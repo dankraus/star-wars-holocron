@@ -6,6 +6,7 @@ gem 'mysql2'
 gem 'feedzirra'
 gem 'angularjs-rails'
 gem 'bootstrap-sass', '>= 2.3.0.0'
+gem 'twitter'
 
 
 # Gems used only for assets and not required
