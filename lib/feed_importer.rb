@@ -8,6 +8,7 @@ class FeedImporter
       feed.news_entries.where(url: entry.url).first_or_create(
           title: entry.title,
           summary: entry.summary,
+          content: entry.content,
           url: entry.url,
           published: entry.published
       )
