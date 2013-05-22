@@ -2,7 +2,7 @@ class NewsEntriesController < ApplicationController
   # GET /news_entries
   # GET /news_entries.json
   def index
-    render json: NewsEntry.all.to_json(include: [:feed])
+    render json: NewsEntry.limit(params[:limit]).to_json(include: [:feed])
   end
 
   # GET /news_entries/:id

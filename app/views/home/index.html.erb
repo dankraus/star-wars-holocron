@@ -3,15 +3,21 @@
         <h3>News from the Web</h3>
         <article ng-repeat="newsEntry in newsEntries">
             <header>
+                <h5>{{newsEntry.published | date:'medium'}}</h5>
                 <h4>{{newsEntry.title}}</h4>
-                <h5>via {{newsEntry.feed.name}}</h5>
+                <h6>via {{newsEntry.feed.name}}</h6>
             </header>
 
-            <p ng-bind-html-unsafe="newsEntry.summary"></p>
+            <p ng-hide="!newsEntry.summary" ng-bind-html-unsafe="newsEntry.summary"></p>
+            <div ng-hide="!newsEntry.content" ng-bind-html-unsafe="newsEntry.content"></div>
 
             <footer>
                 <a href="{{newsEntry.url}}" target="_blank">Read More...</a>
             </footer>
         </article>
+  </section>
+  <section class="span4">
+        <a class="twitter-timeline" href="https://twitter.com/DanKrausDev/star-wars-news" data-widget-id="337020010511867906">Tweets from @DanKrausDev/star-wars-news</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   </section>
 </div>
