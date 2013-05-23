@@ -9,3 +9,4 @@ Feed.create(name: 'Rebel Scum', url: 'http://www.rebelscum.com/rss/rebelscum.rss
 Feed.create(name: 'YakFace', url: 'http://yakfaceforums.com/main/feed/')
 Feed.create(name: 'StarWars.com', url: 'http://starwars.com/data/headlines.xml')
 Feed.create(name: 'TheForce.net', url: 'http://www.theforce.net/rss/theforcenet.rss')
+Feed.create(name: 'R2D2 Central', url: 'http://www.r2d2central.com/rss/r2d2central.rss')
