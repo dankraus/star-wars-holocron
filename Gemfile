@@ -2,7 +2,14 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 
-gem 'mysql2'
+group :production do
+  gem 'pg'
+end
+
+group :development, :test do
+  gem 'mysql2'
+end
+
 gem 'feedzirra'
 gem 'angularjs-rails'
 gem 'bootstrap-sass', '>= 2.3.0.0'
